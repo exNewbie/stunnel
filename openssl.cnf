@@ -1,4 +1,5 @@
-RANDFILE                = /dev/urandom
+RANDFILE                = /var/lib/randfile
+SSL_OP_IGNORE_UNEXPECTED_EOF = yes
 
 [ req ]
 default_bits            = 2048

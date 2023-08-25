@@ -37,6 +37,7 @@ if [[ ! -f ${STUNNEL_KEY} ]]; then
         exit 1
     fi
 
+    openssl rand -writerand /var/lib/randfile
     openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ${STUNNEL_KEY} -out ${STUNNEL_CRT} \
         -config /srv/stunnel/openssl.cnf 
 fi
